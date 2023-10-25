@@ -1,0 +1,59 @@
+﻿@model IEnumerable<HaylandMontavo_ExamenP1.Models.HaylandMontalvo_tabla>
+
+@{
+    ViewData["Title"] = "MONSTER WEB SELLER";
+}
+
+<h1>MONSTER</h1>
+
+<p>
+    <a asp-action="Create">ORDER NEW MONSTER</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.hmDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hmNombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hmNumeroMonsters)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hmPrecio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hmPrimeraVez)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.hmDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hmNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hmNumeroMonsters)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hmPrecio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hmPrimeraVez)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdMonster">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdMonster">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdMonster">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

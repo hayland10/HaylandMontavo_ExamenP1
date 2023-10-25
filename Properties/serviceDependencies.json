@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:HaylandMontavo_ExamenP1Context"
+    }
+  }
+}

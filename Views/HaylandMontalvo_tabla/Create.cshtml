@@ -1,0 +1,53 @@
+﻿@model HaylandMontavo_ExamenP1.Models.HaylandMontalvo_tabla
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>HaylandMontalvo_tabla</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="hmDateTime" class="control-label"></label>
+                <input asp-for="hmDateTime" class="form-control" />
+                <span asp-validation-for="hmDateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hmNombre" class="control-label"></label>
+                <input asp-for="hmNombre" class="form-control" />
+                <span asp-validation-for="hmNombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hmNumeroMonsters" class="control-label"></label>
+                <input asp-for="hmNumeroMonsters" class="form-control" />
+                <span asp-validation-for="hmNumeroMonsters" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hmPrecio" class="control-label"></label>
+                <input asp-for="hmPrecio" class="form-control" />
+                <span asp-validation-for="hmPrecio" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="hmPrimeraVez" /> @Html.DisplayNameFor(model => model.hmPrimeraVez)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

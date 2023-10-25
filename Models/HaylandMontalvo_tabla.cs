@@ -8,7 +8,9 @@ namespace HaylandMontavo_ExamenP1.Models
     {
         //como mínimo, 1 campo de tipo int, 1 campo tipo decimal,
         //1 campo tipo string, 1 campo tipo bool y un campo de tipo fecha.
-        
+        [Key]
+        public int IdMonster { get; set; }
+
         [Required] // 1
         public DateTime hmDateTime { get; set; }
         
@@ -44,8 +46,8 @@ namespace HaylandMontavo_ExamenP1.Models
     {
         public override bool IsValid(object? value)
         {
-            double valor = (double)value;
-            if (valor == 3.50)
+            decimal valor = (decimal)value;
+            if (valor == 3)
             {
                 return true;
             }
