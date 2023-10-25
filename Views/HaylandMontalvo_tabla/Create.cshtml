@@ -13,27 +13,27 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="hmDateTime" class="control-label"></label>
+                <label id="Par"  asp-for="hmDateTime" class="control-label"></label>
                 <input asp-for="hmDateTime" class="form-control" />
                 <span asp-validation-for="hmDateTime" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="hmNombre" class="control-label"></label>
+                <label id="Par"  asp-for="hmNombre" class="control-label"></label>
                 <input asp-for="hmNombre" class="form-control" />
                 <span asp-validation-for="hmNombre" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="hmNumeroMonsters" class="control-label"></label>
+                <label id="Par"  asp-for="hmNumeroMonsters" class="control-label"></label>
                 <input asp-for="hmNumeroMonsters" class="form-control" />
                 <span asp-validation-for="hmNumeroMonsters" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="hmPrecio" class="control-label"></label>
+                <label id="Par"  asp-for="hmPrecio" class="control-label"></label>
                 <input asp-for="hmPrecio" class="form-control" />
                 <span asp-validation-for="hmPrecio" class="text-danger"></span>
             </div>
             <div class="form-group form-check">
-                <label class="form-check-label">
+                <label id="Par" class="form-check-label">
                     <input class="form-check-input" asp-for="hmPrimeraVez" /> @Html.DisplayNameFor(model => model.hmPrimeraVez)
                 </label>
             </div>
